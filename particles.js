@@ -1,10 +1,10 @@
 
 class Particle {
-    constructor(){
+    constructor(x,y,col){
       this.siz=10;
-      this.pos=createVector (random (width),random (height));
+      this.pos=createVector (x,y);
       this.vel =p5.Vector.random2D();
-    //   this.vel.mult (0.1);
+      this.col=col;
       this.acc=createVector (0,0.1);
         
       }
@@ -12,8 +12,8 @@ class Particle {
       show (){
         push ()
         noStroke();
-        fill (255);
-      circle (this.pos.x,this.pos.y,this.siz*2);
+        fill (this.col);
+        circle (this.pos.x,this.pos.y,this.siz*2);
         pop ()
     
       }

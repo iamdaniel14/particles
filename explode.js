@@ -6,6 +6,7 @@ class Explode {
     this.vel.mult(random(1))
     this.acc=createVector (0,0.1);
     this.alpha=255;
+    this.r =random (8)
     }
   
   
@@ -13,7 +14,7 @@ class Explode {
       push ();
       fill (255,random(200),random(200),this.alpha);
       noStroke();
-       circle (this.pos.x,this.pos.y,10);
+       circle (this.pos.x,this.pos.y,this.r);
       pop();
     }
   
